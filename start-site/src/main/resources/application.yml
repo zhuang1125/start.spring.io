@@ -4,6 +4,8 @@ logging:
     org.springframework.jndi: warn
 
 server:
+  servlet:
+    context-path: /start.spring.io
   compression:
     enabled: true
     mime-types: application/json,text/css,text/html
@@ -24,6 +26,7 @@ spring:
 
 initializr:
   env:
+    springBootMetadataUrl: http://127.0.0.1:8080/start.spring.io/springboot-metadata.json
     boms:
       azure:
         groupId: com.microsoft.azure
