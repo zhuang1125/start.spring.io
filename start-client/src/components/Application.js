@@ -51,7 +51,7 @@ export default function Application() {
 
   useEffect(() => {
     if (windowsUtils.origin) {
-      const url = `${windowsUtils.origin}/metadata/client`
+      const url = `${windowsUtils.origin}/start.spring.io/metadata/client`
       getInfo(url).then(jsonConfig => {
         const response = getConfig(jsonConfig)
         dispatchInitializr({ type: 'COMPLETE', payload: { ...response } })
@@ -65,7 +65,7 @@ export default function Application() {
       return
     }
     setGenerating(true)
-    const url = `${windowsUtils.origin}/starter.zip`
+    const url = `${windowsUtils.origin}/start.spring.io/starter.zip`
     const project = await getProject(
       url,
       values,
@@ -80,7 +80,7 @@ export default function Application() {
   }
 
   const onExplore = async () => {
-    const url = `${windowsUtils.origin}/starter.zip`
+    const url = `${windowsUtils.origin}/start.spring.io/starter.zip`
     dispatch({ type: 'UPDATE', payload: { explore: true, list: false } })
     const project = await getProject(
       url,
