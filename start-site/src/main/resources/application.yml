@@ -1429,7 +1429,7 @@ initializr:
         build: maven
         format: project
       default: true
-      action: /starter.zip
+      action: /start.spring.io/starter.zip
     - name: Maven POM
       id: maven-build
       description: Generate a Maven pom.xml.
@@ -1437,7 +1437,7 @@ initializr:
         build: maven
         format: build
       default: false
-      action: /pom.xml
+      action: /start.spring.io/pom.xml
     - name: Gradle Project
       id: gradle-project
       description: Generate a Gradle based project archive.
@@ -1445,7 +1445,7 @@ initializr:
         build: gradle
         format: project
       default: false
-      action: /starter.zip
+      action: /start.spring.io/starter.zip
     - name: Gradle Config
       id: gradle-build
       description: Generate a Gradle build file.
@@ -1453,7 +1453,7 @@ initializr:
         build: gradle
         format: build
       default: false
-      action: /build.gradle
+      action: /start.spring.io/build.gradle
   packagings:
     - name: Jar
       id: jar
